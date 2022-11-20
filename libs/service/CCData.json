@@ -1,0 +1,45 @@
+{
+  "consumptionCalculators": [
+    {
+      "bonding_tile_and_clinker": {
+        "choose_product": {
+          "type": "select",
+          "label": "select",
+          "placeholder": "Mira klæb",
+          "options": ["mira", "lip"]
+        },
+        "area": {
+          "type": "text",
+          "label": "Areal",
+          "placeholder": "m2"
+        },
+        "tile_width": {
+          "type": "text",
+          "label": "Flisebredde",
+          "placeholder": "mm"
+        },
+        "tile_length": {
+          "type": "text",
+          "label": "Fliselængde",
+          "placeholder": "mm"
+        }
+      }
+    },
+
+    {
+      "dry_mortars_and_sheet_glue": {
+        "choose_product": {
+          "type": "select",
+          "label": "select",
+          "placeholder": "Mira klæb",
+          "options": ["mira", "lip"]
+        },
+        "area": {
+          "type": "text",
+          "label": "Areal",
+          "placeholder": "m2"
+        }
+      }
+    }
+  ]
+}

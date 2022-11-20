@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: "Inter";
+}
+.wrapper p {
+  margin: 0;
+}
+.input {
+  display: block;
+  width: 259px;
+  height: 41px;
+  margin-bottom: 1em;
+  border-radius: 5px;
+}
+.inputStyle {
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+.formikError {
+  border: 1px solid red;
+}
+.submitBtn {
+  width: 150px;
+  height: 40px;
+  color: #ffd809;
+  background-color: #363636;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}

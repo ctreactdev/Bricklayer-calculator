@@ -1,0 +1,75 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/murer-pc/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/murer-pc",
+        "index": "apps/murer-pc/src/public/index.html",
+        "baseHref": "/",
+        "main": "apps/murer-pc/src/app/main.tsx",
+        "polyfills": "apps/murer-pc/src/polyfills.ts",
+        "tsConfig": "apps/murer-pc/tsconfig.app.json",
+        "assets": [
+          "apps/murer-pc/src/public/favicon.ico",
+          "apps/murer-pc/src/assets"
+        ],
+        "styles": ["libs/styles/cc.css", "libs/styles/global.css"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/murer-pc/src/environments/environment.ts",
+              "with": "apps/murer-pc/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "murer-pc:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "murer-pc:build:development"
+        },
+        "production": {
+          "buildTarget": "murer-pc:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/murer-pc/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}
