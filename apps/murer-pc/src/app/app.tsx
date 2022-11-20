@@ -11,7 +11,7 @@ const App = () => {
     <StyledApp>
       <Navbar />
       <Routes>
-        <Route path="/" element={<div>Home page!</div>} />
+        <Route path="/" element={<div>Home page!2</div>} />
         <Route path="/consumptionCalculator" element={<CCWrapper />} />
       </Routes>
     </StyledApp>
