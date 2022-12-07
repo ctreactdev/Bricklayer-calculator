@@ -32,6 +32,7 @@ const Navbar = () => {
       <Link to="/">
         <img className="navLogo" src={logo}></img>
       </Link>
+      <Link to="/findWorker">Find Håndværker</Link>
       <Link to="/about">Om virksomheden</Link>
       <Link to="/products">Produkter</Link>
       <Link to="/consumptionCalculator">Forbrugsberegner</Link>

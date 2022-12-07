@@ -1,0 +1,42 @@
+.WorkerWrapperForm {
+  width: 100%;
+  height: 800px;
+  background-color: #f1f2f2;
+}
+
+.findWorkerWrap {
+  width: 100%;
+  height: 800px;
+  background-color: #f1f2f2;
+}
+.findWorker {
+  padding: 2em;
+}
+.findWorker h2 {
+  margin: 0;
+}
+
+/* ===================  WORKERS =================== */
+.workersCardWrap {
+  display: flex;
+  justify-content: center;
+}
+.workersCard {
+  width: 350px;
+  height: 380px;
+  margin: 2em;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.workersCardText {
+  padding: 1em;
+}
+.workersCardText p {
+  margin-bottom: 10px;
+}
+.workersCard img {
+  width: 100%;
+  height: 140px;
+  border-radius: 5px;
+}

@@ -36,6 +36,6 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-::-webkit-input-placeholder {
+/* ::-webkit-input-placeholder {
   text-align: right;
-}
+} */

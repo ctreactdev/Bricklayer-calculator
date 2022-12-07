@@ -8,6 +8,9 @@ import DryMortarsAndSheetGlueWrap from "./DryMortarsAndSheetGlue/DryMortarsAndSh
 import DryMortarsAndSheetGlueFields from "./DryMortarsAndSheetGlue/DryMortarsAndSheetGlueFields";
 import JointingTilesAndClinkerWrap from "./JointingTilesAndClinker/JointingTilesAndClinkerWrap";
 import JointingTilesAndClinkerFields from "./JointingTilesAndClinker/JointingTilesAndClinkerFields";
+import FindWorkerWrap from "./FindWorker/FindWorkerWrap";
+import FindWorkerField from "./FindWorker/FindWorkerField";
+import WorkersWrap from "./Workers/WorkersWrap";
 
 export {
   PageWrapper,
@@ -20,4 +23,7 @@ export {
   DryMortarsAndSheetGlueFields,
   JointingTilesAndClinkerWrap,
   JointingTilesAndClinkerFields,
+  FindWorkerWrap,
+  FindWorkerField,
+  WorkersWrap,
 };
