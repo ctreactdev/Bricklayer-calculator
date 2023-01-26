@@ -4,6 +4,14 @@ import { Formik, Form } from "formik";
 import { BondingTileAndClinkerFields } from "apps/murer-pc/src/app/components/organisms";
 import { SubmitButton } from "@murer-nx/ui";
 import { BondingTileAndClinkerSchema } from "./validationSchema";
+import {
+  Page,
+  Text,
+  View,
+  Document,
+  StyleSheet,
+  PDFDownloadLink,
+} from "@react-pdf/renderer";
 
 interface IWrapper {
   children?: JSX.Element | JSX.Element[];
@@ -22,7 +30,7 @@ const BondingTileAndClinkerWrap: React.FC<IWrapper> = ({}) => {
     tileAmount: 0,
   };
   const [result, setResult] = useState(initialResult);
-  const [submitCount, setSubmitCount] = useState(0);
+  // const [submitCount, setSubmitCount] = useState(0);
   const [tileAdhesiveAmount, setTileAdhesiveAmount] = useState(0);
 
   const initialValues = {};
@@ -53,6 +61,10 @@ const BondingTileAndClinkerWrap: React.FC<IWrapper> = ({}) => {
   const handleSubmit = (values: IValues) => {
     calculate(values);
   };
+  let submitCount = 0;
+  const setSubmitCount = (one: number) => {
+    submitCount = one;
+  };
 
   const totalTileAmount = Math.ceil(result.tileAmount);
   const invokeSetSubmitCount = () => {
@@ -60,6 +72,34 @@ const BondingTileAndClinkerWrap: React.FC<IWrapper> = ({}) => {
     return null;
   };
 
+  // Create styles
+  const styles = StyleSheet.create({
+    page: {
+      flexDirection: "row",
+      backgroundColor: "#E4E4E4",
+    },
+    section: {
+      margin: 10,
+      padding: 10,
+      flexGrow: 1,
+    },
+  });
+
+  // Create Document Component
+  const MyDocument = () => (
+    <Document>
+      <Page size="A4" style={styles.page}>
+        <View style={styles.section}>
+          <Text>Materialeliste:</Text>
+          <Text>Antal fliser: {totalTileAmount} stk.</Text>
+          <Text>Mængde Fliseklæb: {tileAdhesiveAmount} kg</Text>
+        </View>
+        <View style={styles.section}>
+          <Text>Section #2</Text>
+        </View>
+      </Page>
+    </Document>
+  );
   return (
     <Wrapper>
       <div>
@@ -94,6 +134,14 @@ const BondingTileAndClinkerWrap: React.FC<IWrapper> = ({}) => {
             <h3>Materialeliste</h3>
             <h4>Antal fliser: {totalTileAmount} stk.</h4>
             <h4>Mængde Fliseklæb: {tileAdhesiveAmount} kg</h4>
+            <div>
+              <PDFDownloadLink
+                className="pdfdownloadbtn"
+                document={<MyDocument />}
+              >
+                Download PDF
+              </PDFDownloadLink>
+            </div>
           </div>
         )}
       </div>

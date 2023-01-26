@@ -15,6 +15,7 @@ const FindWorkerWrapper: React.FunctionComponent<IFindWorker> = ({}) => {
             Prisvindende håndværkere i hele landet. Find en fagmand - det er
             gratis og uforpligtende.
           </p>
+
           <FindWorkerWrap />
         </div>
       </div>

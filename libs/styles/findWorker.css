@@ -17,6 +17,23 @@
 }
 
 /* ===================  WORKERS =================== */
+
+.searchInputWrap {
+  display: flex;
+}
+.searchInputWrap input {
+  width: 400px;
+  height: 40px;
+}
+.searchInputWrap input::placeholder {
+  font: 16px/3 sans-serif;
+}
+.searchInputWrap button {
+  margin-left: 1em;
+  height: 40px;
+}
+.chooseTypelaborCard {
+}
 .workersCardWrap {
   display: flex;
   justify-content: center;

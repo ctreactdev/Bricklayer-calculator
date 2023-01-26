@@ -3,9 +3,7 @@ import { CCWrapper, Navbar, WorkersWrap } from "./components/organisms";
 import { FindWorkerWrapper } from "./components/pages";
 import { Route, Routes, Link } from "react-router-dom";
 
-const StyledApp = styled.div`
-  // Your style here
-`;
+const StyledApp = styled.div``;
 
 const App = () => {
   return (
@@ -13,7 +11,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<div>Home page</div>} />
-        <Route path="/workers" element={<WorkersWrap />} />
+        {/* <Route path="/workers" element={<WorkersWrap />} /> */}
         <Route path="/findWorker" element={<FindWorkerWrapper />} />
         <Route path="/consumptionCalculator" element={<CCWrapper />} />
       </Routes>
