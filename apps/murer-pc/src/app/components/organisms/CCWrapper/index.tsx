@@ -9,6 +9,9 @@ import {
 interface ICCWrapper {}
 const Wrapper = styled.div`
   display: flex;
+  innerNavBtn {
+    width: 100%;
+  }
   button p {
     font-weight: 700;
     font-size: 1.3em;
@@ -43,15 +46,21 @@ const CCWrapper: React.FunctionComponent<ICCWrapper> = ({}) => {
       <div className="innerNav">
         <h1>Beregner</h1>
         <h4>Vælg en beregnings type</h4>
-        <button onClick={() => setShowCC("BondingTileAndClinker")}>
-          <p>- Klæbning af fliser og klinker</p>
-        </button>
-        <button onClick={() => setShowCC("DryMortarsAndSheetGlue")}>
-          <p>- Tørmørtler og pladelim</p>
-        </button>
-        <button onClick={() => setShowCC("JointingTilesAndClinker")}>
-          <p>- Fugning af fliser og klinker</p>
-        </button>
+        <div className="innerNavBtn">
+          <button onClick={() => setShowCC("BondingTileAndClinker")}>
+            <p>- Klæbning af fliser og klinker</p>
+          </button>
+        </div>
+        <div className="innerNavBtn">
+          <button onClick={() => setShowCC("DryMortarsAndSheetGlue")}>
+            <p>- Tørmørtler og pladelim</p>
+          </button>
+        </div>
+        <div className="innerNavBtn">
+          <button onClick={() => setShowCC("JointingTilesAndClinker")}>
+            <p>- Fugning af fliser og klinker</p>
+          </button>
+        </div>
       </div>
       <div className="CCWrapperForm">
         <div className="innerFormFields">

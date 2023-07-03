@@ -11,6 +11,7 @@ import JointingTilesAndClinkerFields from "./JointingTilesAndClinker/JointingTil
 import FindWorkerWrap from "./FindWorker/FindWorkerWrap";
 import FindWorkerField from "./FindWorker/FindWorkerField";
 import WorkersWrap from "./Workers/WorkersWrap";
+import HomepageWrap from "./Homepage";
 
 export {
   PageWrapper,
@@ -26,4 +27,5 @@ export {
   FindWorkerWrap,
   FindWorkerField,
   WorkersWrap,
+  HomepageWrap,
 };
