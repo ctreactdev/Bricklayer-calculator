@@ -1,4 +1,5 @@
 {
+  "name": "murer-pc",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/murer-pc/src",
   "projectType": "application",
@@ -19,9 +20,13 @@
           "apps/murer-pc/src/public/favicon.ico",
           "apps/murer-pc/src/assets"
         ],
-        "styles": ["libs/styles/cc.css", "libs/styles/global.css", "libs/styles/findWorker.css"],
+        "styles": [
+          "libs/styles/cc.css",
+          "libs/styles/global.css",
+          "libs/styles/findWorker.css"
+        ],
         "scripts": [],
-        "webpackConfig": "@nrwl/react/plugins/webpack"
+        "webpackConfig": ""
       },
       "configurations": {
         "development": {
